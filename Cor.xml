@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="3" inline="false" x="13" y="-129">
+  <block type="controls_whileUntil" id="3" inline="false" x="26" y="-81">
     <field name="MODE">WHILE</field>
     <value name="NUMBER">
       <block type="math_number" id="4">
@@ -139,7 +139,7 @@
       </block>
     </value>
   </block>
-  <block type="procedures_defnoreturn" id="32" x="33" y="217">
+  <block type="procedures_defnoreturn" id="32" x="137" y="182">
     <mutation></mutation>
     <field name="NAME">Turn</field>
     <statement name="STACK">
@@ -182,7 +182,7 @@
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="42" x="307" y="206">
+  <block type="procedures_defnoreturn" id="42" x="356" y="172">
     <mutation></mutation>
     <field name="NAME">DisplaySpec</field>
     <statement name="STACK">
