@@ -28,74 +28,62 @@
                   </block>
                 </value>
                 <next>
-                  <block type="oled_cleardisplay" id="78">
+                  <block type="oled_setcursor" id="79" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="80">
+                        <field name="NUM">5</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="81">
+                        <field name="NUM">15</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="oled_setcursor" id="79" inline="true">
-                        <value name="STARTX">
-                          <block type="math_number" id="80">
-                            <field name="NUM">5</field>
-                          </block>
-                        </value>
-                        <value name="STARTY">
-                          <block type="math_number" id="81">
-                            <field name="NUM">15</field>
+                      <block type="oled_drawnumber" id="82" inline="true">
+                        <value name="NUMBER">
+                          <block type="sensor_spectrometer" id="83">
+                            <field name="LIGHT">GREEN</field>
                           </block>
                         </value>
                         <next>
-                          <block type="oled_drawnumber" id="82" inline="true">
-                            <value name="NUMBER">
-                              <block type="sensor_spectrometer" id="83">
-                                <field name="LIGHT">GREEN</field>
+                          <block type="oled_setcursor" id="87" inline="true">
+                            <value name="STARTX">
+                              <block type="math_number" id="88">
+                                <field name="NUM">5</field>
+                              </block>
+                            </value>
+                            <value name="STARTY">
+                              <block type="math_number" id="89">
+                                <field name="NUM">25</field>
                               </block>
                             </value>
                             <next>
-                              <block type="oled_cleardisplay" id="86">
+                              <block type="oled_drawnumber" id="90" inline="true">
+                                <value name="NUMBER">
+                                  <block type="sensor_spectrometer" id="91">
+                                    <field name="LIGHT">YELLOW</field>
+                                  </block>
+                                </value>
                                 <next>
-                                  <block type="oled_setcursor" id="87" inline="true">
+                                  <block type="oled_setcursor" id="95" inline="true">
                                     <value name="STARTX">
-                                      <block type="math_number" id="88">
+                                      <block type="math_number" id="96">
                                         <field name="NUM">5</field>
                                       </block>
                                     </value>
                                     <value name="STARTY">
-                                      <block type="math_number" id="89">
-                                        <field name="NUM">25</field>
+                                      <block type="math_number" id="97">
+                                        <field name="NUM">35</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="oled_drawnumber" id="90" inline="true">
+                                      <block type="oled_drawnumber" id="98" inline="true">
                                         <value name="NUMBER">
-                                          <block type="sensor_spectrometer" id="91">
-                                            <field name="LIGHT">YELLOW</field>
+                                          <block type="sensor_spectrometer" id="99">
+                                            <field name="LIGHT">RED</field>
                                           </block>
                                         </value>
-                                        <next>
-                                          <block type="oled_cleardisplay" id="94">
-                                            <next>
-                                              <block type="oled_setcursor" id="95" inline="true">
-                                                <value name="STARTX">
-                                                  <block type="math_number" id="96">
-                                                    <field name="NUM">5</field>
-                                                  </block>
-                                                </value>
-                                                <value name="STARTY">
-                                                  <block type="math_number" id="97">
-                                                    <field name="NUM">35</field>
-                                                  </block>
-                                                </value>
-                                                <next>
-                                                  <block type="oled_drawnumber" id="98" inline="true">
-                                                    <value name="NUMBER">
-                                                      <block type="sensor_spectrometer" id="99">
-                                                        <field name="LIGHT">RED</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
                                       </block>
                                     </next>
                                   </block>
