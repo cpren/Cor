@@ -110,8 +110,18 @@
               <block type="controls_if" id="7" inline="false">
                 <mutation else="1"></mutation>
                 <value name="IF0">
-                  <block type="procedures_callreturn" id="173">
-                    <mutation name="EdgeCheck"></mutation>
+                  <block type="logic_compare" id="193" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="procedures_callreturn" id="166">
+                        <mutation name="EdgeCheck"></mutation>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="194">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
                 <statement name="DO0">
@@ -138,9 +148,6 @@
         </statement>
       </block>
     </next>
-  </block>
-  <block type="procedures_callreturn" id="166" x="91" y="234">
-    <mutation name="EdgeCheck"></mutation>
   </block>
   <block type="procedures_defnoreturn" id="83" x="250" y="255">
     <mutation></mutation>
