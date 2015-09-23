@@ -30,7 +30,7 @@
                     </value>
                     <value name="B">
                       <block type="math_number" id="194">
-                        <field name="NUM">0</field>
+                        <field name="NUM">1</field>
                       </block>
                     </value>
                   </block>
@@ -60,68 +60,43 @@
       </block>
     </next>
   </block>
-  <block type="procedures_defreturn" id="56" inline="false" x="370" y="-30">
+  <block type="procedures_defreturn" id="56" inline="false" x="381" y="-65">
     <mutation></mutation>
     <field name="NAME">EdgeCheck</field>
     <statement name="STACK">
-      <block type="variables_set" id="195" inline="true">
-        <field name="VAR">Dark</field>
-        <value name="VALUE">
-          <block type="math_number" id="196">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-        <next>
-          <block type="controls_if" id="65" inline="false">
-            <mutation else="1"></mutation>
-            <value name="IF0">
-              <block type="logic_operation" id="8" inline="true">
+      <block type="controls_if" id="65" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="8" inline="true">
+            <field name="OP">LAND</field>
+            <value name="A">
+              <block type="logic_operation" id="9" inline="true">
                 <field name="OP">LAND</field>
                 <value name="A">
-                  <block type="logic_operation" id="9" inline="true">
-                    <field name="OP">LAND</field>
+                  <block type="logic_compare" id="10" inline="true">
+                    <field name="OP">LT</field>
                     <value name="A">
-                      <block type="logic_compare" id="10" inline="true">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <block type="sensor_spectrometer" id="11">
-                            <field name="LIGHT">BLUE</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="12">
-                            <field name="NUM">45</field>
-                          </block>
-                        </value>
+                      <block type="sensor_spectrometer" id="11">
+                        <field name="LIGHT">BLUE</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="logic_compare" id="13" inline="true">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <block type="sensor_spectrometer" id="14">
-                            <field name="LIGHT">GREEN</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="15">
-                            <field name="NUM">45</field>
-                          </block>
-                        </value>
+                      <block type="math_number" id="12">
+                        <field name="NUM">45</field>
                       </block>
                     </value>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="logic_compare" id="16" inline="true">
+                  <block type="logic_compare" id="13" inline="true">
                     <field name="OP">LT</field>
                     <value name="A">
-                      <block type="sensor_spectrometer" id="17">
-                        <field name="LIGHT">RED</field>
+                      <block type="sensor_spectrometer" id="14">
+                        <field name="LIGHT">GREEN</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number" id="18">
+                      <block type="math_number" id="15">
                         <field name="NUM">45</field>
                       </block>
                     </value>
@@ -129,28 +104,43 @@
                 </value>
               </block>
             </value>
-            <statement name="DO0">
-              <block type="variables_set" id="103" inline="true">
-                <field name="VAR">Dark</field>
-                <value name="VALUE">
-                  <block type="math_number" id="110">
-                    <field name="NUM">1</field>
+            <value name="B">
+              <block type="logic_compare" id="16" inline="true">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="sensor_spectrometer" id="17">
+                    <field name="LIGHT">RED</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="18">
+                    <field name="NUM">45</field>
                   </block>
                 </value>
               </block>
-            </statement>
-            <statement name="ELSE">
-              <block type="variables_set" id="115" inline="true">
-                <field name="VAR">Dark</field>
-                <value name="VALUE">
-                  <block type="math_number" id="116">
-                    <field name="NUM">0</field>
-                  </block>
-                </value>
-              </block>
-            </statement>
+            </value>
           </block>
-        </next>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="103" inline="true">
+            <field name="VAR">Dark</field>
+            <value name="VALUE">
+              <block type="math_number" id="110">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="variables_set" id="115" inline="true">
+            <field name="VAR">Dark</field>
+            <value name="VALUE">
+              <block type="math_number" id="116">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </statement>
       </block>
     </statement>
     <value name="RETURN">
