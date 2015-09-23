@@ -149,7 +149,7 @@
       </block>
     </value>
   </block>
-  <block type="procedures_defnoreturn" id="83" x="250" y="255">
+  <block type="procedures_defnoreturn" id="83" x="33" y="217">
     <mutation></mutation>
     <field name="NAME">Turn</field>
     <statement name="STACK">
@@ -192,7 +192,7 @@
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="28" x="450" y="275">
+  <block type="procedures_defnoreturn" id="28" x="307" y="206">
     <mutation></mutation>
     <field name="NAME">DisplaySpec</field>
     <statement name="STACK">
