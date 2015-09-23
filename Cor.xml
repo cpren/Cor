@@ -1,102 +1,92 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="variables_set" id="92" inline="true" x="31" y="-69">
-    <field name="VAR">Dark</field>
-    <value name="VALUE">
-      <block type="math_number" id="99">
-        <field name="NUM">0</field>
+  <block type="controls_whileUntil" id="3" inline="false" x="33" y="-104">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="math_number" id="4">
+        <field name="NUM">1</field>
       </block>
     </value>
-    <next>
-      <block type="controls_whileUntil" id="1" inline="false">
-        <field name="MODE">WHILE</field>
-        <value name="NUMBER">
-          <block type="math_number" id="2">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="procedures_callnoreturn" id="3">
-            <mutation name="DisplaySpec"></mutation>
-            <next>
-              <block type="controls_if" id="7" inline="false">
-                <mutation else="1"></mutation>
-                <value name="IF0">
-                  <block type="logic_compare" id="193" inline="true">
-                    <field name="OP">EQ</field>
-                    <value name="A">
-                      <block type="procedures_callreturn" id="166">
-                        <mutation name="EdgeCheck"></mutation>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="194">
-                        <field name="NUM">1</field>
-                      </block>
-                    </value>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="5">
+        <mutation name="DisplaySpec"></mutation>
+        <next>
+          <block type="controls_if" id="6" inline="false">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="7" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="procedures_callreturn" id="8">
+                    <mutation name="EdgeCheck"></mutation>
                   </block>
                 </value>
-                <statement name="DO0">
-                  <block type="procedures_callnoreturn" id="90">
-                    <mutation name="Turn"></mutation>
+                <value name="B">
+                  <block type="math_number" id="9">
+                    <field name="NUM">1</field>
                   </block>
-                </statement>
-                <statement name="ELSE">
-                  <block type="movement_forward" id="4">
-                    <next>
-                      <block type="robot_delay" id="5" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="6">
-                            <field name="NUM">500</field>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
+                </value>
               </block>
-            </next>
+            </value>
+            <statement name="DO0">
+              <block type="procedures_callnoreturn" id="10">
+                <mutation name="Turn"></mutation>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="movement_forward" id="11">
+                <next>
+                  <block type="robot_delay" id="12" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="13">
+                        <field name="NUM">500</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
           </block>
-        </statement>
+        </next>
       </block>
-    </next>
+    </statement>
   </block>
-  <block type="procedures_defreturn" id="56" inline="false" x="381" y="-65">
+  <block type="procedures_defreturn" id="14" inline="false" x="381" y="-65">
     <mutation></mutation>
     <field name="NAME">EdgeCheck</field>
     <statement name="STACK">
-      <block type="controls_if" id="65" inline="false">
+      <block type="controls_if" id="15" inline="false">
         <mutation else="1"></mutation>
         <value name="IF0">
-          <block type="logic_operation" id="8" inline="true">
+          <block type="logic_operation" id="16" inline="true">
             <field name="OP">LAND</field>
             <value name="A">
-              <block type="logic_operation" id="9" inline="true">
+              <block type="logic_operation" id="17" inline="true">
                 <field name="OP">LAND</field>
                 <value name="A">
-                  <block type="logic_compare" id="10" inline="true">
+                  <block type="logic_compare" id="18" inline="true">
                     <field name="OP">LT</field>
                     <value name="A">
-                      <block type="sensor_spectrometer" id="11">
+                      <block type="sensor_spectrometer" id="19">
                         <field name="LIGHT">BLUE</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number" id="12">
+                      <block type="math_number" id="20">
                         <field name="NUM">45</field>
                       </block>
                     </value>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="logic_compare" id="13" inline="true">
+                  <block type="logic_compare" id="21" inline="true">
                     <field name="OP">LT</field>
                     <value name="A">
-                      <block type="sensor_spectrometer" id="14">
+                      <block type="sensor_spectrometer" id="22">
                         <field name="LIGHT">GREEN</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number" id="15">
+                      <block type="math_number" id="23">
                         <field name="NUM">45</field>
                       </block>
                     </value>
@@ -105,15 +95,15 @@
               </block>
             </value>
             <value name="B">
-              <block type="logic_compare" id="16" inline="true">
+              <block type="logic_compare" id="24" inline="true">
                 <field name="OP">LT</field>
                 <value name="A">
-                  <block type="sensor_spectrometer" id="17">
+                  <block type="sensor_spectrometer" id="25">
                     <field name="LIGHT">RED</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="math_number" id="18">
+                  <block type="math_number" id="26">
                     <field name="NUM">45</field>
                   </block>
                 </value>
@@ -122,20 +112,20 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="variables_set" id="103" inline="true">
+          <block type="variables_set" id="27" inline="true">
             <field name="VAR">Dark</field>
             <value name="VALUE">
-              <block type="math_number" id="110">
+              <block type="math_number" id="28">
                 <field name="NUM">1</field>
               </block>
             </value>
           </block>
         </statement>
         <statement name="ELSE">
-          <block type="variables_set" id="115" inline="true">
+          <block type="variables_set" id="29" inline="true">
             <field name="VAR">Dark</field>
             <value name="VALUE">
-              <block type="math_number" id="116">
+              <block type="math_number" id="30">
                 <field name="NUM">0</field>
               </block>
             </value>
@@ -144,38 +134,38 @@
       </block>
     </statement>
     <value name="RETURN">
-      <block type="variables_get" id="120">
+      <block type="variables_get" id="31">
         <field name="VAR">Dark</field>
       </block>
     </value>
   </block>
-  <block type="procedures_defnoreturn" id="83" x="33" y="217">
+  <block type="procedures_defnoreturn" id="32" x="33" y="217">
     <mutation></mutation>
     <field name="NAME">Turn</field>
     <statement name="STACK">
-      <block type="movement_right" id="19">
+      <block type="movement_right" id="33">
         <next>
-          <block type="robot_delay" id="20" inline="true">
+          <block type="robot_delay" id="34" inline="true">
             <value name="DELAY">
-              <block type="math_number" id="21">
+              <block type="math_number" id="35">
                 <field name="NUM">1350</field>
               </block>
             </value>
             <next>
-              <block type="movement_forward" id="22">
+              <block type="movement_forward" id="36">
                 <next>
-                  <block type="robot_delay" id="23" inline="true">
+                  <block type="robot_delay" id="37" inline="true">
                     <value name="DELAY">
-                      <block type="math_number" id="24">
+                      <block type="math_number" id="38">
                         <field name="NUM">500</field>
                       </block>
                     </value>
                     <next>
-                      <block type="movement_right" id="25">
+                      <block type="movement_right" id="39">
                         <next>
-                          <block type="robot_delay" id="26" inline="true">
+                          <block type="robot_delay" id="40" inline="true">
                             <value name="DELAY">
-                              <block type="math_number" id="27">
+                              <block type="math_number" id="41">
                                 <field name="NUM">1350</field>
                               </block>
                             </value>
@@ -192,74 +182,74 @@
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="28" x="307" y="206">
+  <block type="procedures_defnoreturn" id="42" x="307" y="206">
     <mutation></mutation>
     <field name="NAME">DisplaySpec</field>
     <statement name="STACK">
-      <block type="oled_cleardisplay" id="29">
+      <block type="oled_cleardisplay" id="43">
         <next>
-          <block type="oled_setcursor" id="30" inline="true">
+          <block type="oled_setcursor" id="44" inline="true">
             <value name="STARTX">
-              <block type="math_number" id="31">
+              <block type="math_number" id="45">
                 <field name="NUM">5</field>
               </block>
             </value>
             <value name="STARTY">
-              <block type="math_number" id="32">
+              <block type="math_number" id="46">
                 <field name="NUM">5</field>
               </block>
             </value>
             <next>
-              <block type="oled_drawtext" id="33">
+              <block type="oled_drawtext" id="47">
                 <field name="TEXT">Blue: </field>
                 <next>
-                  <block type="oled_drawnumber" id="34" inline="true">
+                  <block type="oled_drawnumber" id="48" inline="true">
                     <value name="NUMBER">
-                      <block type="sensor_spectrometer" id="35">
+                      <block type="sensor_spectrometer" id="49">
                         <field name="LIGHT">BLUE</field>
                       </block>
                     </value>
                     <next>
-                      <block type="oled_setcursor" id="36" inline="true">
+                      <block type="oled_setcursor" id="50" inline="true">
                         <value name="STARTX">
-                          <block type="math_number" id="37">
+                          <block type="math_number" id="51">
                             <field name="NUM">5</field>
                           </block>
                         </value>
                         <value name="STARTY">
-                          <block type="math_number" id="38">
+                          <block type="math_number" id="52">
                             <field name="NUM">15</field>
                           </block>
                         </value>
                         <next>
-                          <block type="oled_drawtext" id="39">
+                          <block type="oled_drawtext" id="53">
                             <field name="TEXT">Green: </field>
                             <next>
-                              <block type="oled_drawnumber" id="40" inline="true">
+                              <block type="oled_drawnumber" id="54" inline="true">
                                 <value name="NUMBER">
-                                  <block type="sensor_spectrometer" id="41">
+                                  <block type="sensor_spectrometer" id="55">
                                     <field name="LIGHT">GREEN</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="oled_setcursor" id="42" inline="true">
+                                  <block type="oled_setcursor" id="56" inline="true">
                                     <value name="STARTX">
-                                      <block type="math_number" id="43">
+                                      <block type="math_number" id="57">
                                         <field name="NUM">5</field>
                                       </block>
                                     </value>
                                     <value name="STARTY">
-                                      <block type="math_number" id="44">
+                                      <block type="math_number" id="58">
                                         <field name="NUM">25</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="oled_drawtext" id="45">
+                                      <block type="oled_drawtext" id="59">
                                         <field name="TEXT">Red: </field>
                                         <next>
-                                          <block type="oled_drawnumber" id="46" inline="true">
+                                          <block type="oled_drawnumber" id="60" inline="true">
                                             <value name="NUMBER">
-                                              <block type="sensor_spectrometer" id="47">
+                                              <block type="sensor_spectrometer" id="61">
                                                 <field name="LIGHT">RED</field>
                                               </block>
                                             </value>
