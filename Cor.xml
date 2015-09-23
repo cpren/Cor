@@ -1,65 +1,102 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1" inline="false" x="-14" y="-10">
-    <field name="MODE">WHILE</field>
-    <value name="NUMBER">
-      <block type="math_number" id="2">
-        <field name="NUM">1</field>
+  <block type="variables_set" id="92" inline="true" x="-8" y="-46">
+    <field name="VAR">Dark</field>
+    <value name="VALUE">
+      <block type="math_number" id="99">
+        <field name="NUM">0</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="procedures_callnoreturn" id="3">
-        <mutation name="DisplaySpec"></mutation>
-        <next>
-          <block type="controls_if" id="7" inline="false">
-            <mutation else="1"></mutation>
-            <value name="IF0">
-              <block type="logic_operation" id="8" inline="true">
-                <field name="OP">LAND</field>
-                <value name="A">
-                  <block type="logic_operation" id="9" inline="true">
-                    <field name="OP">LAND</field>
+    <next>
+      <block type="controls_whileUntil" id="1" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="math_number" id="2">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="procedures_callnoreturn" id="3">
+            <mutation name="DisplaySpec"></mutation>
+            <next>
+              <block type="controls_if" id="7" inline="false">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="127" inline="true">
+                    <field name="OP">EQ</field>
                     <value name="A">
-                      <block type="logic_compare" id="10" inline="true">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <block type="sensor_spectrometer" id="11">
-                            <field name="LIGHT">BLUE</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="12">
-                            <field name="NUM">45</field>
-                          </block>
-                        </value>
+                      <block type="variables_get" id="138">
+                        <field name="VAR">Dark</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="logic_compare" id="13" inline="true">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <block type="sensor_spectrometer" id="14">
-                            <field name="LIGHT">GREEN</field>
+                      <block type="math_number" id="134">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="procedures_callnoreturn" id="90">
+                    <mutation name="Turn"></mutation>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="movement_forward" id="4">
+                    <next>
+                      <block type="robot_delay" id="5" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="6">
+                            <field name="NUM">500</field>
                           </block>
                         </value>
-                        <value name="B">
-                          <block type="math_number" id="15">
-                            <field name="NUM">45</field>
-                          </block>
-                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defreturn" id="56" inline="false" x="301" y="-36">
+    <mutation></mutation>
+    <field name="NAME">EdgeCheck</field>
+    <statement name="STACK">
+      <block type="controls_if" id="65" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="8" inline="true">
+            <field name="OP">LAND</field>
+            <value name="A">
+              <block type="logic_operation" id="9" inline="true">
+                <field name="OP">LAND</field>
+                <value name="A">
+                  <block type="logic_compare" id="10" inline="true">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="sensor_spectrometer" id="11">
+                        <field name="LIGHT">BLUE</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="12">
+                        <field name="NUM">45</field>
                       </block>
                     </value>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="logic_compare" id="16" inline="true">
+                  <block type="logic_compare" id="13" inline="true">
                     <field name="OP">LT</field>
                     <value name="A">
-                      <block type="sensor_spectrometer" id="17">
-                        <field name="LIGHT">RED</field>
+                      <block type="sensor_spectrometer" id="14">
+                        <field name="LIGHT">GREEN</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number" id="18">
+                      <block type="math_number" id="15">
                         <field name="NUM">45</field>
                       </block>
                     </value>
@@ -67,37 +104,81 @@
                 </value>
               </block>
             </value>
-            <statement name="DO0">
-              <block type="movement_right" id="19">
+            <value name="B">
+              <block type="logic_compare" id="16" inline="true">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="sensor_spectrometer" id="17">
+                    <field name="LIGHT">RED</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="18">
+                    <field name="NUM">45</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="103" inline="true">
+            <field name="VAR">Dark</field>
+            <value name="VALUE">
+              <block type="math_number" id="110">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="variables_set" id="115" inline="true">
+            <field name="VAR">Dark</field>
+            <value name="VALUE">
+              <block type="math_number" id="116">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="120">
+        <field name="VAR">Dark</field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="83" x="250" y="255">
+    <mutation></mutation>
+    <field name="NAME">Turn</field>
+    <statement name="STACK">
+      <block type="movement_right" id="19">
+        <next>
+          <block type="robot_delay" id="20" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="21">
+                <field name="NUM">1350</field>
+              </block>
+            </value>
+            <next>
+              <block type="movement_forward" id="22">
                 <next>
-                  <block type="robot_delay" id="20" inline="true">
+                  <block type="robot_delay" id="23" inline="true">
                     <value name="DELAY">
-                      <block type="math_number" id="21">
-                        <field name="NUM">1350</field>
+                      <block type="math_number" id="24">
+                        <field name="NUM">500</field>
                       </block>
                     </value>
                     <next>
-                      <block type="movement_forward" id="22">
+                      <block type="movement_right" id="25">
                         <next>
-                          <block type="robot_delay" id="23" inline="true">
+                          <block type="robot_delay" id="26" inline="true">
                             <value name="DELAY">
-                              <block type="math_number" id="24">
-                                <field name="NUM">500</field>
+                              <block type="math_number" id="27">
+                                <field name="NUM">1350</field>
                               </block>
                             </value>
-                            <next>
-                              <block type="movement_right" id="25">
-                                <next>
-                                  <block type="robot_delay" id="26" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="27">
-                                        <field name="NUM">1350</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
                           </block>
                         </next>
                       </block>
@@ -105,26 +186,13 @@
                   </block>
                 </next>
               </block>
-            </statement>
-            <statement name="ELSE">
-              <block type="movement_forward" id="4">
-                <next>
-                  <block type="robot_delay" id="5" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="6">
-                        <field name="NUM">500</field>
-                      </block>
-                    </value>
-                  </block>
-                </next>
-              </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="28" x="443" y="227">
+  <block type="procedures_defnoreturn" id="28" x="450" y="275">
     <mutation></mutation>
     <field name="NAME">DisplaySpec</field>
     <statement name="STACK">
